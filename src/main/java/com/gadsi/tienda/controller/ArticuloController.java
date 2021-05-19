@@ -3,9 +3,9 @@ package com.gadsi.tienda.controller;
 import com.gadsi.tienda.model.Articulo;
 import com.gadsi.tienda.service.ArticuloService;
 
-
-
+import org.h2.util.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -19,17 +19,16 @@ public class ArticuloController {
     @Autowired
     private ArticuloService articuloService;
 
-    
-    
     @RequestMapping(value = "/articulo/{id}", method = RequestMethod.GET)
     Articulo consultaArticulo(@PathVariable Integer id){
         return  articuloService.findById(id).get();
     }
 
-    @RequestMapping(value = "/articulo", method = RequestMethod.POST)
-    String agregarArticulo(@RequestBody Articulo articulo){
+    @RequestMapping(produces=MediaType.APPLICATION_JSON_VALUE ,value = "/articulo", method = RequestMethod.POST)
+    public String agregarArticulo(@RequestBody Articulo articulo){
     	Articulo salvarArticulo = articuloService.save(articulo);
-        return "SUCCESS";
+
+        return "{\"mensaje\":\"Articulo Guardado Correctamente\"}";
     }
 
     @RequestMapping(value = "/articulo", method = RequestMethod.PUT)
