@@ -2,7 +2,6 @@ package com.gadsi.tienda.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Sets;
@@ -32,7 +31,12 @@ public class SwaggerConfiguration  {
 				.build()
 				.enableUrlTemplating(false)
 				.protocols(Sets.newHashSet("http"));
+	
+			
 	}
+
+	
+	
 
 	private Predicate<String> getPaths() {
 		return Predicates.or(
