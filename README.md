@@ -1,1 +1,0 @@
-# gapsi_proyecto_prueba
