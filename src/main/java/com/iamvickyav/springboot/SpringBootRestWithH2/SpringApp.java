@@ -1,13 +1,12 @@
-package com.tienda.gadsi;
+package com.iamvickyav.springboot.SpringBootRestWithH2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GadsiApplication {
+public class SpringApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GadsiApplication.class, args);
+		SpringApplication.run(SpringApp.class, args);
 	}
-
 }
