@@ -1,4 +1,4 @@
-package com.iamvickyav.springboot.SpringBootRestWithH2;
+package com.gadsi.tienda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
